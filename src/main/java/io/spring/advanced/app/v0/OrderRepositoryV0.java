@@ -13,7 +13,7 @@ public class OrderRepositoryV0 {
             throw new IllegalArgumentException("exception!!");
         }
 
-        sleep(1000);    //리포지토리는 상품을 저장하는데 약 1초 정도 걸리는 것으로 가정하기 위해 1초 지연을 주었다.(1000ms)
+        sleep(1000);    //리포지토리는 상품을 저장하는데 약 1초 정도 걸리는 것으로 가정하기 위해 1초 지연(1000ms)
     }
 
     private void sleep(int millis) {
