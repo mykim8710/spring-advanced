@@ -17,7 +17,7 @@ public class OrderRepositoryV2 {
         TraceStatus traceStatus = null;
 
         try {
-            traceStatus = helloTrace.beginSync(traceId,"OrderRepositoryV3.save()");   // 메시지 이름 : 컨트롤러 이름 + 메서드 이름(수작업)
+            traceStatus = helloTrace.beginSync(traceId,"OrderRepositoryV2.save()");   // 메시지 이름 : 컨트롤러 이름 + 메서드 이름(수작업)
 
             if(itemId.equals("ex")) {
                 throw new IllegalArgumentException("exception!!");

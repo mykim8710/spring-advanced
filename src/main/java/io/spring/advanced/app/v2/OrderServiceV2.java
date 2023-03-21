@@ -15,7 +15,7 @@ public class OrderServiceV2 {
     public void orderItem(TraceId traceId, String itemId) {
         TraceStatus traceStatus = null;
         try {
-            traceStatus = helloTrace.beginSync(traceId,"OrderServiceV3.orderItem()");   // 메시지 이름 : 컨트롤러 이름 + 메서드 이름(수작업)
+            traceStatus = helloTrace.beginSync(traceId,"OrderServiceV2.orderItem()");   // 메시지 이름 : 컨트롤러 이름 + 메서드 이름(수작업)
             orderRepository.save(traceStatus.getTraceId(), itemId);
             helloTrace.end(traceStatus);
         }catch (Exception e) {

@@ -16,7 +16,7 @@ public class OrderControllerV2 {
     public String request(String itemId) {
         TraceStatus traceStatus = null;
         try {
-            traceStatus = helloTrace.begin("OrderControllerV3.request()");   // 메시지 이름 : 컨트롤러 이름 + 메서드 이름(수작업)
+            traceStatus = helloTrace.begin("OrderControllerV2.request()");   // 메시지 이름 : 컨트롤러 이름 + 메서드 이름(수작업)
             orderService.orderItem(traceStatus.getTraceId(), itemId);
             helloTrace.end(traceStatus);
             return "ok";
