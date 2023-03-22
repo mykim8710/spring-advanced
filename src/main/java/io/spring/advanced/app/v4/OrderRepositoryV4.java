@@ -1,5 +1,6 @@
 package io.spring.advanced.app.v4;
 
+import io.spring.advanced.global.ThreadUtil;
 import io.spring.advanced.trace.TraceStatus;
 import io.spring.advanced.trace.logtrace.LogTrace;
 import io.spring.advanced.trace.template.AbstractTemplate;
@@ -21,20 +22,11 @@ public class OrderRepositoryV4 {
                 if(itemId.equals("ex")) {
                     throw new IllegalArgumentException("exception!!");
                 }
-                sleep(1000);
+                ThreadUtil.sleep(1000);
                 return null;
             }
         };
 
         template.execute("OrderRepositoryV4.save()");
     }
-
-    private void sleep(int millis) {
-        try {
-            Thread.sleep(millis);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
 }
